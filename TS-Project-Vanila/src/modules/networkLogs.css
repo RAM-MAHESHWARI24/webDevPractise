@@ -1,0 +1,89 @@
+/* --- NETWORK LOGS MODULE STYLES --- */
+.logs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.logs-badge {
+  font-size: 0.75rem;
+  background: rgba(88, 166, 255, 0.1);
+  color: #58a6ff;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  border: 1px solid rgba(88, 166, 255, 0.3);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.logs-table-container {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.logs-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.logs-table th {
+  border-bottom: 1px solid #30363d;
+  color: #8b949e;
+  padding: 0.75rem 0.5rem;
+  font-weight: 600;
+}
+
+.logs-table td {
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid #21262d;
+}
+
+.logs-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.logs-method {
+  font-weight: 600;
+}
+
+.logs-method.get {
+  color: #2ea043;
+}
+
+.logs-method.post {
+  color: #ff5863;
+}
+
+.logs-method.put {
+  color: #58a6ff;
+}
+
+.logs-status-badge {
+  font-size: 0.8rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.logs-status-badge.ok {
+  color: #2ea043;
+  background: rgba(46, 160, 67, 0.1);
+}
+
+.logs-status-badge.error {
+  color: #ff5863;
+  background: rgba(255, 88, 99, 0.1);
+}
+
+.logs-timestamp, .logs-latency {
+  color: #8b949e;
+  font-family: monospace;
+}
+
+.logs-endpoint {
+  font-family: monospace;
+  color: #c9d1d9;
+}

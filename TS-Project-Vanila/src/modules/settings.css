@@ -1,0 +1,40 @@
+/* --- SETTINGS MODULE STYLES --- */
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  max-width: 400px;
+}
+
+.settings-input, .settings-select {
+  padding: 0.6rem 0.75rem;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  color: #c9d1d9;
+  border-radius: 6px;
+  outline: none;
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease;
+}
+
+.settings-input:focus, .settings-select:focus {
+  border-color: #58a6ff;
+}
+
+.settings-btn {
+  margin-top: 1rem;
+  padding: 0.65rem 1rem;
+  background-color: #238636;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+.settings-btn:hover {
+  background-color: #2ea043;
+}

@@ -1,0 +1,19 @@
+#mainH {
+    width: max-content !important;
+    width: auto !important;
+    color: brown !important;
+}
+
+body {
+    background-color: black;
+    color: beige;
+}
+
+form {
+    color: brown;
+}
+
+button,
+input {
+    color: inherit;
+}

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+</head>
+
+<body>
+
+  <div class="login-container">
+    <h2>System Access</h2>
+
+    <form id="login-form">
+      <div class="input-group">
+        <label for="email-field">Corporate Email</label>
+        <input type="email" id="email-field" placeholder="name@domain.com" required />
+      </div>
+
+      <div class="input-group">
+        <label for="password-field">Password</label>
+        <input type="password" id="password-field" placeholder="Enter password" required />
+      </div>
+
+      <button type="submit" id="submit-btn">Authenticate</button>
+      <p id="status-message"></p>
+    </form>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

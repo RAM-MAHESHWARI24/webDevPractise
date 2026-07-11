@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Enterprise Dashboard</title>
+</head>
+
+<body>
+
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="brand">C-DOT // TELEMATICS</div>
+            <nav class="nav-links">
+                <a href="#" class="nav-active" id="Overview">Overview</a>
+                <a href="#" id="NL">Network Logs</a>
+                <a href="#" id="NS">Node Status</a>
+                <a href="#" id="Set">Settings</a>
+            </nav>
+            <div class="user-panel">
+                <button id="log_out_but" class="btn-secondary">Log Out</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <h2>System Overview</h2>
+                <div class="status-badge">● ALL SYSTEMS NOMINAL</div>
+            </header>
+            <section id="content">
+
+            </section>
+
+        </main>
+    </div>
+
+    <script type="module" src="/src/dashboard.ts"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+h1 {
+    color: brown;
+    text-align: center;
+    /* width: 10%; */
+    font-weight: lighter;
+    font-weight: bolder;
+    /* line-height: 50px; */
+    font-size: 100px;
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Consolas, monospace;
+}
+
+p {
+    /* color postion style width*/
+    text-decoration: rgb(90, 1, 16) underline wavy 1px;
+    line-height: 130%;
+}
+
+/* button{
+    color: rgb(255, 255, 255);
+    background-color: rgb(27, 2, 2);  
+} */
+#Disabled {
+    background-color: black;
+    color: wheat;
+}
+
+.tag {
+    color: blue;
+}
+
+span {
+    color: red;
+}
+
+span a {
+    color: chocolate;
+}
+
+footer>a {
+    font-weight: 700;
+    background-color: teal;
+}
+
+button+p {
+    color: darkblue;
+}
+
+button[type=reset] {
+    background-color: brown;
+}
+
+a:hover {
+    color: yellowgreen;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+button:active {
+    background-color: red;
+    color: green;
+}
+
+a:active {
+    background-color: red;
+    color: green;
+}
+
+a:nth(2n) {
+    color: chartreuse;
+}
+
+p::first-letter {
+    font-size: 150%;
+}
+
+p::first-line {
+    font-size: 125%;
+}
+
+p::selection {
+    background-color: tomato;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model — Interactive Guide</title>
+    <meta name="description" content="An interactive visual guide to the CSS Box Model: margin, border, padding, and content.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <!-- Animated background blobs -->
+    <div class="bg-blob blob-1" aria-hidden="true"></div>
+    <div class="bg-blob blob-2" aria-hidden="true"></div>
+    <div class="bg-blob blob-3" aria-hidden="true"></div>
+
+    <header>
+        <p class="badge">📦 CSS Fundamentals</p>
+        <h1>The Box Model</h1>
+        <p class="subtitle">Every element in CSS is a rectangular box. Understanding its layers is the key to mastering layout.</p>
+    </header>
+
+    <!-- Interactive Box Model Diagram -->
+    <section class="diagram-section" id="diagram">
+        <h2 class="section-title">Anatomy of a Box</h2>
+        <div class="box-model-diagram">
+            <div class="layer layer-margin">
+                <span class="layer-label">margin</span>
+                <div class="layer layer-border">
+                    <span class="layer-label">border</span>
+                    <div class="layer layer-padding">
+                        <span class="layer-label">padding</span>
+                        <div class="layer layer-content">
+                            <span class="layer-label">content</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="cards-section">
+        <h2 class="section-title">Explore Each Layer</h2>
+        <div class="cards-grid">
+
+            <div class="card" id="one">
+                <div class="card-icon">🔲</div>
+                <h3>Margin</h3>
+                <p>The outermost layer — transparent space that separates the element from its neighbors. It collapses vertically and can even be negative.</p>
+                <code class="code-snippet">margin: 20px auto;</code>
+            </div>
+
+            <div class="card" id="two">
+                <div class="card-icon">🖼️</div>
+                <h3>Border</h3>
+                <p>A visible boundary wrapping the padding and content. It can be styled with different widths, colors, and patterns like solid, dashed, or double.</p>
+                <code class="code-snippet">border: 3px solid #a78bfa;</code>
+            </div>
+
+            <div class="card" id="three">
+                <div class="card-icon">🧱</div>
+                <h3>Padding</h3>
+                <p>Breathing room between the content and the border. Unlike margin, padding inherits the element's background color, giving content visual comfort.</p>
+                <code class="code-snippet">padding: 16px 24px;</code>
+            </div>
+
+            <div class="card" id="four">
+                <div class="card-icon">✏️</div>
+                <h3>Content</h3>
+                <p>The innermost area where your actual text, images, and child elements live. Its size is controlled by <code>width</code> and <code>height</code> properties.</p>
+                <code class="code-snippet">width: 300px; height: auto;</code>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Tip Section -->
+    <section class="tip-section">
+        <div class="tip-card">
+            <h3>💡 Pro Tip: <code>box-sizing: border-box</code></h3>
+            <p>By default, <code>width</code> and <code>height</code> only set the <strong>content</strong> size. Padding and border are added on top, making elements larger than expected. Use <code>box-sizing: border-box</code> to include padding and border within the declared width.</p>
+            <div class="code-block">
+                <pre><code>*, *::before, *::after {
+  box-sizing: border-box;
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Built with 💜 while learning CSS &mdash; Box Model Demo</p>
+    </footer>
+</body>
+
+</html>

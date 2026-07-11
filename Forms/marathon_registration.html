@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marathon Registration Form</title>
+</head>
+
+<body>
+    <main>
+        <h1>Race Registration!</h1>
+        <form action="/submit">
+            <label for="FirstName">First Name</label>
+            <input type="text" name="FirstName" id="FirstName" required>
+            <label for="LastName">Last Name</label>
+            <input type="text" name="LastName" id="LastName" required placeholder="If No last name use .">
+            <br>
+            <!-- id is to match label
+            name is the parameter under which data will be sent
+            value is what data will be sent
+            for radio to be linked they should have same name in a form -->
+            Select a Race:
+            <br>
+            <input type="radio" value="full5k" id="5k" name="race_type">
+            <label for="5k">Full Run 5k</label>
+            <br>
+            <input type="radio" value="halfM" id="FM" name="race_type">
+            <label for="FM">Half Marathon</label>
+            <br>
+            <input type="radio" value="fullM" id="HM" name="race_type">
+            <label for="HM">Full Marathon</label>
+            <br>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required minlength="8" maxlength="20">
+            <br>
+            <label for="age_group">Select Age Group</label>
+            <select name="age_group" id="age_group">
+                <option value="u18" selected>under 18</option>
+                <option value="a18">above 18</option>
+            </select>
+            <br>
+            <button>Register!</button>
+        </form>
+    </main>
+</body>
+<footer>
+
+</footer>
+
+</html>
