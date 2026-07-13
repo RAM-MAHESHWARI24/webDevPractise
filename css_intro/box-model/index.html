@@ -4,97 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Box Model — Interactive Guide</title>
-    <meta name="description" content="An interactive visual guide to the CSS Box Model: margin, border, padding, and content.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <title>Box-Style_CSS</title>
     <link rel="stylesheet" href="app.css">
 </head>
 
 <body>
-    <!-- Animated background blobs -->
-    <div class="bg-blob blob-1" aria-hidden="true"></div>
-    <div class="bg-blob blob-2" aria-hidden="true"></div>
-    <div class="bg-blob blob-3" aria-hidden="true"></div>
+    <button>Click Me!</button>
+    <div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque cumque, recusandae perferendis debitis
+            repellendus distinctio aut minima porro sunt velit? Alias officiis aliquam expedita voluptate eius quidem
+            deleniti, aperiam esse?
+            <button>Click Me!</button>
+            Reiciendis dolorum neque velit assumenda, in tempora natus rerum, delectus ad pariatur autem mollitia sequi
+            explicabo recusandae nobis doloremque numquam aliquam tenetur quos quis! Voluptas cupiditate eveniet
+            veritatis perspiciatis ad.
+        </p>
+    </div>
+    <div id="two">
+        <button>Click Me!</button>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque cumque, recusandae perferendis debitis
+            repellendus distinctio aut minima porro sunt velit? Alias officiis aliquam expedita voluptate eius quidem
+            deleniti, aperiam esse?
+            Reiciendis dolorum neque velit assumenda, in tempora natus rerum, delectus ad pariatur autem mollitia sequi
+            explicabo recusandae nobis doloremque numquam aliquam tenetur quos quis! Voluptas cupiditate eveniet
+            veritatis perspiciatis ad.</p>
+    </div>
+    <div id="2">
+        <div>HELLO</div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque cumque, recusandae perferendis debitis
+            repellendus distinctio aut minima porro sunt velit? Alias officiis aliquam expedita voluptate eius quidem
+            deleniti, aperiam esse?
+            Reiciendis dolorum neque velit assumenda, in tempora natus rerum, delectus ad pariatur autem mollitia sequi
+            explicabo recusandae nobis doloremque numquam aliquam tenetur quos quis! Voluptas cupiditate eveniet
+            veritatis perspiciatis ad.</p>
+    </div>
+    <div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque cumque, recusandae perferendis debitis
+            repellendus distinctio aut minima porro sunt velit? Alias officiis aliquam expedita voluptate eius quidem
+            deleniti, aperiam esse?
+            Reiciendis dolorum neque velit assumenda, in tempora natus rerum, delectus ad pariatur autem mollitia sequi
+            explicabo recusandae nobis doloremque numquam aliquam tenetur quos quis! Voluptas cupiditate eveniet
+            <button>Click Me!</button>
+            veritatis perspiciatis ad.
+        </p>
+    </div>
 
-    <header>
-        <p class="badge">📦 CSS Fundamentals</p>
-        <h1>The Box Model</h1>
-        <p class="subtitle">Every element in CSS is a rectangular box. Understanding its layers is the key to mastering layout.</p>
-    </header>
 
-    <!-- Interactive Box Model Diagram -->
-    <section class="diagram-section" id="diagram">
-        <h2 class="section-title">Anatomy of a Box</h2>
-        <div class="box-model-diagram">
-            <div class="layer layer-margin">
-                <span class="layer-label">margin</span>
-                <div class="layer layer-border">
-                    <span class="layer-label">border</span>
-                    <div class="layer layer-padding">
-                        <span class="layer-label">padding</span>
-                        <div class="layer layer-content">
-                            <span class="layer-label">content</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <span>I AM A SPAN 1</span>
+    <span>I AM A SPAN 2</span>
+    <span>I AM A SPAN 3</span>
 
-    <!-- Cards Section -->
-    <section class="cards-section">
-        <h2 class="section-title">Explore Each Layer</h2>
-        <div class="cards-grid">
-
-            <div class="card" id="one">
-                <div class="card-icon">🔲</div>
-                <h3>Margin</h3>
-                <p>The outermost layer — transparent space that separates the element from its neighbors. It collapses vertically and can even be negative.</p>
-                <code class="code-snippet">margin: 20px auto;</code>
-            </div>
-
-            <div class="card" id="two">
-                <div class="card-icon">🖼️</div>
-                <h3>Border</h3>
-                <p>A visible boundary wrapping the padding and content. It can be styled with different widths, colors, and patterns like solid, dashed, or double.</p>
-                <code class="code-snippet">border: 3px solid #a78bfa;</code>
-            </div>
-
-            <div class="card" id="three">
-                <div class="card-icon">🧱</div>
-                <h3>Padding</h3>
-                <p>Breathing room between the content and the border. Unlike margin, padding inherits the element's background color, giving content visual comfort.</p>
-                <code class="code-snippet">padding: 16px 24px;</code>
-            </div>
-
-            <div class="card" id="four">
-                <div class="card-icon">✏️</div>
-                <h3>Content</h3>
-                <p>The innermost area where your actual text, images, and child elements live. Its size is controlled by <code>width</code> and <code>height</code> properties.</p>
-                <code class="code-snippet">width: 300px; height: auto;</code>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Tip Section -->
-    <section class="tip-section">
-        <div class="tip-card">
-            <h3>💡 Pro Tip: <code>box-sizing: border-box</code></h3>
-            <p>By default, <code>width</code> and <code>height</code> only set the <strong>content</strong> size. Padding and border are added on top, making elements larger than expected. Use <code>box-sizing: border-box</code> to include padding and border within the declared width.</p>
-            <div class="code-block">
-                <pre><code>*, *::before, *::after {
-  box-sizing: border-box;
-}</code></pre>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>Built with 💜 while learning CSS &mdash; Box Model Demo</p>
-    </footer>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi ab fugit aut voluptatem modi, iste ratione
+        eos ducimus repellat beatae fugiat velit ipsam minus obcaecati pariatur repudiandae aliquam. Perspiciatis,
+        alias?
+        <button>Click Me!</button>
+        Qui commodi corporis magnam cupiditate blanditiis iure hic, veniam minus voluptatibus. Dolor magnam, veritatis
+        laudantium beatae commodi culpa, reprehenderit atque error aut saepe repellat dolore, enim omnis deserunt quos
+        voluptates. <span>I am span 4</span>
+        Soluta error facere voluptatibus sapiente quibusdam harum. Illo, vero cupiditate! Explicabo reprehenderit vitae
+        corrupti consequatur impedit recusandae error atque aspernatur ipsam quia, quibusdam nostrum, reiciendis ratione
+        aliquam sequi similique aperiam.
+    </p>
+    <article>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque molestiae suscipit hic debitis asperiores
+            itaque maiores neque tenetur labore, dicta, repellendus ad unde beatae natus vitae consequatur, quia iusto
+            eos.
+            Architecto repellat pariatur rem, dolores neque, sit sint perspiciatis accusamus cum libero at culpa
+            officiis quisquam placeat veniam nisi dolorum repudiandae necessitatibus nihil voluptas incidunt aliquid
+            <button>Click Me!</button>
+            velit recusandae mollitia. Ea.
+            Nobis, suscipit maiores qui rerum, pariatur nisi tenetur, nihil illum cum saepe provident autem! Quasi,
+            corporis recusandae. Molestias accusantium obcaecati eveniet libero adipisci maxime laborum officia deleniti
+            eaque, sed quod!
+            Neque, dolorem? Quidem quos voluptate, vel atque ab soluta unde et quo pariatur magni expedita illum sed
+            ipsum a necessitatibus dolores placeat esse ex perspiciatis in laboriosam dicta! Placeat, dolorum.
+            Voluptatum deserunt nulla nemo officiis non quidem blanditiis? Quo dolores itaque repudiandae deleniti
+            blanditiis tempore animi recusandae dignissimos, distinctio harum ut exercitationem vitae modi accusantium
+            nisi error iste aliquid velit.
+        </p>
+    </article>
+    <button>Click Me!</button>
 </body>
 
 </html>
