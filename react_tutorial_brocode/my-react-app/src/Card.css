@@ -1,0 +1,24 @@
+.card {
+    border: 3px solid hsl(0, 0%, 50%);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px hsl(249, 26%, 41%);
+    max-width: 250px;
+
+}
+
+.card .cardTitle {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    color: white;
+}
+
+#profilePic {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: contain;
+}
