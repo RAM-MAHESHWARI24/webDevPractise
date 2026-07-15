@@ -1,0 +1,3 @@
+react short hand 
+
+rafce in a new page will make a export function with same name.
