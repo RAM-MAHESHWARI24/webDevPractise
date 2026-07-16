@@ -1,0 +1,23 @@
+img {
+    width: 30%;
+    height: 500px;
+    display: inline-block;
+    /* margin: 1.667%  ; */
+    margin: calc(10%/6);
+
+}
+
+/* 3 pictures 30 + 30 +30 =90%*/
+/* 100 -90 =10% for margin */
+/* 10 divided by 6 =1.66667% each side */
+
+nav {
+    font-family: 'Raleway', sans-serif;
+    border-bottom: 2px solid #f1f1f1;
+    width: 30%;
+    text-transform: uppercase;
+    margin-left: 1.667%;
+    padding: 1.2em 0;
+    font-weight: 900;
+    font-size: 1.5em;
+}
