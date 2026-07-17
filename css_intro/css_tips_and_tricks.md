@@ -173,5 +173,126 @@ Unlike JavaScript, CSS fails **silently**. If a browser encounters a property va
    "css.validate": true
    ```
 
+---
+
+## 7. Flexbox Layout
+
+Flexbox (Flexible Box Layout) is a 1-dimensional layout model designed for distributing space and aligning items along a main axis and a cross axis.
+
+### A. Core Concepts: Main Axis vs. Cross Axis
+The direction of the main axis and cross axis dynamically changes based on the `flex-direction` property:
+*   **`flex-direction: row` (Default):**
+    *   **Main Axis:** Horizontal (left to right)
+    *   **Cross Axis:** Vertical (top to bottom)
+*   **`flex-direction: column`:**
+    *   **Main Axis:** Vertical (top to bottom)
+    *   **Cross Axis:** Horizontal (left to right)
+
+### B. Flex Container Properties
+To enable Flexbox, define a container with `display: flex;` or `display: inline-flex;`.
+
+1. **`flex-direction`**
+   Defines the direction of the main axis (the direction flex items are laid out in the container).
+   ```css
+   .container {
+       flex-direction: row | row-reverse | column | column-reverse;
+   }
+   ```
+2. **`flex-wrap`**
+   Controls whether flex items are forced onto a single line or can wrap onto multiple lines.
+   ```css
+   .container {
+       flex-wrap: nowrap | wrap | wrap-reverse;
+   }
+   ```
+3. **`justify-content` (Handles Main Axis)**
+   Defines the alignment and spacing of items along the **main axis**.
+   ```css
+   .container {
+       justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+   }
+   ```
+   *   `space-between`: Items are evenly distributed; the first item is at the start edge, and the last item is at the end edge.
+   *   `space-around`: Items are evenly distributed with equal space around them.
+   *   `space-evenly`: Items are distributed so that the spacing between any two items (and the edges) is equal.
+4. **`align-items` (Handles Cross Axis)**
+   Defines the default alignment for items along the **cross axis** for the current line.
+   ```css
+   .container {
+       align-items: stretch | flex-start | flex-end | center | baseline;
+   }
+   ```
+   *   `stretch` (Default): Items stretch to fill the container's cross-axis height/width.
+   *   `center`: Items are centered along the cross axis.
+
+### C. Practical Example: Vertical Stack Container
+Based on the starter layout in `Flexbox Starter/app.css`:
+```css
+#container {
+    display: flex;
+    flex-direction: column;   /* Main axis is vertical; cross axis is horizontal */
+    flex-wrap: nowrap;        /* Items do not wrap to new columns */
+    justify-content: space-between; /* Spaces items out along the vertical main axis */
+    align-items: center;      /* Centers items horizontally along the cross axis */
+}
+```
+
+### D. Flex Item Properties (Child Elements)
+These properties are applied directly to flex items (children of the flex container) to control their sizing and alignment individually.
+
+1. **`flex-grow` (How items grow)**
+   Defines the ability of a flex item to grow if there is remaining space in the flex container. It is a unitless ratio.
+   *   `flex-grow: 0` (Default): The item will not grow beyond its content/defined size.
+   *   `flex-grow: 1`: All items with `flex-grow: 1` will expand equally to share the remaining space.
+   *   `flex-grow: 2`: This item will take up twice as much of the leftover space compared to items with `flex-grow: 1`.
+
+2. **`flex-shrink` (How items shrink)**
+   Defines the ability of a flex item to shrink if the total size of all flex items is larger than the container.
+   *   `flex-shrink: 1` (Default): The item will shrink if container size overflows.
+   *   `flex-shrink: 0`: Prevents the item from shrinking.
+   *   `flex-shrink: 2`: This item will shrink twice as fast/much as items with `flex-shrink: 1`.
+
+3. **`flex-basis` (Initial size)**
+   Defines the default size of an item before remaining space is distributed.
+   *   `flex-basis: auto` (Default): Looks at the item's `width` or `height` property (or defaults to the content size).
+   *   `flex-basis: [length]` (e.g., `200px`, `20%`): Sets a starting dimension.
+
+4. **`align-self` (Individual alignment override)**
+   Allows the default alignment (specified by the container's `align-items` property) to be overridden for an individual item.
+   ```css
+   .item {
+       align-self: auto | flex-start | flex-end | center | baseline | stretch;
+   }
+   ```
+   *(Note: Remember that in a multi-line wrapping flex container, `align-self` only aligns the item within its current line row/column, not the whole container).*
+
+### E. The `flex` Shorthand (Highly Recommended)
+Rather than writing `flex-grow`, `flex-shrink`, and `flex-basis` separately, use the `flex` shorthand property. It automatically sets intelligent defaults for omitted values.
+
+**Syntax:**
+```css
+.item {
+    flex: [flex-grow] [flex-shrink] [flex-basis];
+}
+```
+
+#### Shorthand Decoding Rules:
+*   **One unitless value (`flex: 1`):**
+    Sets `flex-grow: 1`. (Other properties default to: `flex-shrink: 1`, `flex-basis: 0`).
+*   **One dimension/percentage value (`flex: 200px`):**
+    Sets `flex-basis: 200px`. (Other properties default to: `flex-grow: 1`, `flex-shrink: 1`).
+*   **Two unitless values (`flex: 1 2`):**
+    Sets `flex-grow: 1` and `flex-shrink: 2`. (Other properties default to: `flex-basis: 0`).
+*   **One unitless value and one dimension (`flex: 1 200px`):**
+    Sets `flex-grow: 1` and `flex-basis: 200px`. (Other properties default to: `flex-shrink: 1`).
+*   **Three values (`flex: 1 2 200px`):**
+    Explicitly sets `flex-grow: 1`, `flex-shrink: 2`, and `flex-basis: 200px`.
+
+#### Standard Shorthand Keywords:
+*   `flex: initial` (Same as `0 1 auto`): The item does not grow, shrinks if necessary, and uses its default width/height.
+*   `flex: auto` (Same as `1 1 auto`): The item grows and shrinks, starting from its default width/height.
+*   `flex: none` (Same as `0 0 auto`): The item is rigid (does not grow, does not shrink, uses default size).
+
+
 
 

@@ -1,5 +1,6 @@
 body {
     font-family: 'Open Sans', sans-serif;
+    text-align: center;
 }
 
 h1 {
@@ -9,14 +10,76 @@ h1 {
 #container {
     background-color: #003049;
     width: 90%;
-    height: 500px;
+    /* height: 500px; */
     margin: 0 auto;
     border: 5px solid #003049;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+
+    /* justify-content: handles main axis */
+    justify-content: center;
+    /* align-items: handles cross axis */
+    align-items: flex-end;
+    /* align-content : handles the space between wrapped rows(default when flex-direction:row) or 
+    between columns(when flex-direction:column)
+    But if no wrapping is happening it will have no effect */
+    /* align-content: space-around; */
+}
+
+
+
+div:nth-of-type(2) {
+    /* align-self: center; */
+    flex-grow: 1;
+    flex-shrink: 2;
+}
+
+div:nth-of-type(3) {
+    /* align-self: flex-end; */
+    flex-grow: 1;
+}
+
+div:nth-of-type(4) {
+    /* align-self: center; */
+    flex-grow: 2;
+}
+
+div:nth-of-type(5) {
+    /* flex-basis: 900px; */
+    flex-grow: 2.5;
+    /* align-self: flex-start; */
+    flex-shrink: 0;
 }
 
 #container div {
-    width: 200px;
+    width: 367px;
     height: 200px;
+}
+
+main {
+    border: 5px solid black;
+    height: 500px;
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+}
+
+/* flex short-hand 
+   flex: flex-grow flex-shrink flex-basis
+   grow and shrink are unit less 
+   For single unit less input ie(flex:1) is for flex-grow:1 
+   if flex:200px then it is flex-basis:200px.
+   if flex:1 2 then it is flex-grow:1 and flex-shrink:2
+   if flex:1 200px then it is flex-grow:1 and flex-shrink:1 and flex-basis:200px
+*/
+main .sidebar {
+    background-color: #2ec4b6;
+    flex: 1 2 200px;
+}
+
+main .maincontent {
+    background-color: brown;
+    flex: 2 1 800px;
+
 }
