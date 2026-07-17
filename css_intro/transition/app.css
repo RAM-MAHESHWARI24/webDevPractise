@@ -1,0 +1,42 @@
+.circle {
+    border: 5px solid black;
+    width: 200px;
+    height: 200px;
+    background-color: magenta;
+    transition: 2s 1s ease-in-out;
+}
+
+.circle:hover {
+    border-radius: 50%;
+    background-color: green;
+    /* transition: all 1s ease-in-out; */
+}
+
+.circle:hover~.transtionS div {
+    margin-left: 200px;
+    transition: 3s;
+}
+
+body:has(.circle:hover) .transtionS div {
+    margin-left: 200px;
+    transition: 3s;
+}
+
+.circle:active {
+    background-color: black;
+    transform: scale(2);
+    /* transition: background-color 1s ease; */
+}
+
+.transtionS div {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border: 5px solid black;
+    text-align: center;
+}
+
+.transtionS:hover div {
+    margin-left: 200px;
+    transition: 5s;
+}

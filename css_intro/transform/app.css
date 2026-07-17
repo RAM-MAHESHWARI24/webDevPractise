@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+h1:nth-of-type(2n) {
+    background-color: burlywood;
+}
+
+h1:nth-of-type(2n+1) {
+    background-color: blueviolet;
+}
+
+h1 {
+    margin: 5px auto;
+    text-align: center;
+    border: 5px solid black;
+    padding: 10px;
+}
+
+h1:nth-of-type(1) {
+    transform-origin: left;
+    transform: rotate(65deg);
+}
+
+h1:nth-of-type(2) {
+    transform: translateX(600px)
+}
+
+section {
+    transform: translateX(100px);
+}
